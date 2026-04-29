@@ -3,357 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HIVE — Diseño que zumba</title>
+  <title>HIVE – Servicios Tecnológicos</title>
   <link rel="stylesheet" href="/src/styles/style_ser.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <!-- CURSOR PERSONALIZADO -->
+   <!-- CURSOR PERSONALIZADO -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <!-- NAV -->
-  <nav class="nav">
+  <!-- NAVBAR -->
+  <nav class="navbar">
     <div class="nav-logo">
-      <svg class="nav-honeycomb" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
-        <polygon points="20,9 29,14 29,26 20,31 11,26 11,14" fill="#000"/>
+      <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <!-- Diaper / Pañal SVG icon -->
+        <rect x="4" y="14" width="40" height="22" rx="8" fill="#FFD600" stroke="#111" stroke-width="2"/>
+        <ellipse cx="24" cy="25" rx="10" ry="7" fill="#fff" stroke="#111" stroke-width="1.5"/>
+        <path d="M4 22 Q14 30 24 25 Q34 20 44 22" stroke="#111" stroke-width="1.5" fill="none"/>
+        <path d="M4 28 Q14 22 24 25 Q34 28 44 28" stroke="#111" stroke-width="1.5" fill="none"/>
+        <circle cx="12" cy="25" r="3" fill="#111"/>
+        <circle cx="36" cy="25" r="3" fill="#111"/>
+        <rect x="10" y="18" width="6" height="3" rx="1.5" fill="#111" opacity="0.3"/>
+        <rect x="32" y="18" width="6" height="3" rx="1.5" fill="#111" opacity="0.3"/>
       </svg>
-      <span>HIVE</span>
+      <span class="logo-text">HIVE</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="#index">Inicio</a></li>
-      <li><a href="#productos">Productos</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contactos" class="nav-cta">Contáctanos</a></li>
-    </ul>
-    <button class="nav-burger" id="burger" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
+   <nav class="navbar">
+  
+  <!-- LOGO -->
+  <div class="nav-logo">
+    <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FFD600" stroke="#000" stroke-width="1.5"/>
+      <polygon points="20,9 29,14 29,26 20,31 11,26 11,14" fill="#000"/>
+    </svg>
+    <span class="logo-text">HIVE</span>
+  </div>
+
+  <!-- MENÚ -->
+  <ul class="nav-links">
+    <li><a href="/index.html">INICIO</a></li>
+    <li><a href="/src/public/productos.html">PRODUCTOS</a></li>
+    <li><a href="/src/public/servicios.html">SERVICIOS</a></li>
+    <li>
+      <a href="/src/public/contactos.html" class="btn-contact">
+        CONTÁCTANOS
+      </a>
+    </li>
+  </ul>
+
+</nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
   </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+     <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/src/public/productos.html">Productos</a></li>
+      <li><a href="/src/public/servicios.html">Servicios</a></li>
+      <li><a href="/src/public/contactos.html" class="nav-cta">Contáctanos</a></li>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
-    <!-- Panal de fondo animado -->
-    <div class="honeycomb-bg" id="honeycombBg"></div>
-
+    <div class="hero-hexagons">
+      <div class="hex h1"></div>
+      <div class="hex h2"></div>
+      <div class="hex h3"></div>
+      <div class="hex h4"></div>
+      <div class="hex h5"></div>
+    </div>
     <div class="hero-content">
-      <div class="hero-tag">Agencia Creativa</div>
-      <h1 class="hero-title">
-        <span class="line">colmena</span>
-        <span class="line accent">de</span>
-        <span class="line">tecnologia.</span>
-      </h1>
-      <p class="hero-sub">Construimos marcas que dejan huella. Colmenas de ideas, estrategia y creatividad que trabajan para ti.</p>
-      <div class="hero-actions">
-        <a href="#trabajo" class="btn-primary">Ver nuestro trabajo</a>
-        <a href="#nosotros" class="btn-ghost">Conoce HIVE →</a>
+      <span class="hero-tag">🐝 Tecnología que evoluciona contigo</span>
+      <h1>SERVICIOS<br/><span class="accent">TECH</span> QUE<br/>TRANSFORMAN</h1>
+      <p>Actualizaciones, ampliaciones, soporte y más. Tu equipo siempre al máximo rendimiento.</p>
+      <div class="hero-btns">
+        <a href="#servicios" class="btn-primary">Ver Servicios</a>
+        <a href="#contacto" class="btn-secondary">Cotizar ahora →</a>
       </div>
     </div>
-
-    <!-- Logo central gigante -->
-    <div class="hero-logo-wrap">
-      <div class="big-hex" id="bigHex">
-        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="hex-outer" points="100,8 188,55 188,165 100,212 12,165 12,55"/>
-          <polygon class="hex-mid"   points="100,28 170,68 170,148 100,188 30,148 30,68"/>
-          <polygon class="hex-inner" points="100,52 152,82 152,142 100,172 48,142 48,82"/>
-          <!-- Abeja central -->
-          <ellipse cx="100" cy="112" rx="18" ry="24" fill="#FFD700"/>
-          <ellipse cx="100" cy="112" rx="18" ry="24" fill="none" stroke="#000" stroke-width="2"/>
-          <!-- Rayas abeja -->
-          <line x1="82" y1="104" x2="118" y2="104" stroke="#000" stroke-width="3"/>
-          <line x1="82" y1="112" x2="118" y2="112" stroke="#000" stroke-width="3"/>
-          <line x1="82" y1="120" x2="118" y2="120" stroke="#000" stroke-width="3"/>
-          <!-- Alas -->
-          <ellipse cx="78" cy="96" rx="16" ry="10" fill="rgba(255,255,255,0.75)" stroke="#000" stroke-width="1.5" class="wing"/>
-          <ellipse cx="122" cy="96" rx="16" ry="10" fill="rgba(255,255,255,0.75)" stroke="#000" stroke-width="1.5" class="wing"/>
-          <!-- Ojos -->
-          <circle cx="93" cy="92" r="3" fill="#000"/>
-          <circle cx="107" cy="92" r="3" fill="#000"/>
-          <!-- Antenas -->
-          <line x1="93" y1="88" x2="83" y2="74" stroke="#000" stroke-width="2"/>
-          <circle cx="83" cy="74" r="3" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
-          <line x1="107" y1="88" x2="117" y2="74" stroke="#000" stroke-width="2"/>
-          <circle cx="117" cy="74" r="3" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
-        </svg>
+    <div class="hero-badge">
+      <svg viewBox="0 0 120 120" class="badge-ring">
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#FFD600" stroke-width="2" stroke-dasharray="4 6"/>
+      </svg>
+      <div class="badge-center">
+        <span class="badge-num">+500</span>
+        <span class="badge-label">equipos<br/>optimizados</span>
       </div>
-    </div>
-
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span>Branding ✦</span><span>UX/UI ✦</span><span>Motion ✦</span><span>Web Dev ✦</span>
-      <span>Strategy ✦</span><span>Identidad ✦</span><span>Campañas ✦</span><span>Social Media ✦</span>
-      <span>Branding ✦</span><span>UX/UI ✦</span><span>Motion ✦</span><span>Web Dev ✦</span>
-      <span>Strategy ✦</span><span>Identidad ✦</span><span>Campañas ✦</span><span>Social Media ✦</span>
-    </div>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-n">98%</span><span>Satisfacción</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-n">24/7</span><span>Soporte</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-n">+10</span><span>Años exp.</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-n">500+</span><span>Clientes</span></div>
   </div>
 
   <!-- SERVICIOS -->
   <section class="servicios" id="servicios">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Servicios</span>
-        <h2>Lo que hacemos<br/><em>mejor que nadie.</em></h2>
+    <div class="section-header">
+      <span class="section-tag">¿Qué hacemos?</span>
+      <h2>NUESTROS <span class="accent">SERVICIOS</span></h2>
+      <p>Soluciones completas para mantener tu tecnología en la cima</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card" data-index="01">
+        <div class="card-icon">⚡</div>
+        <div class="card-badge">Popular</div>
+        <h3>Actualización de<br/>Software</h3>
+        <p>Mantén tus sistemas al día con las últimas versiones, parches de seguridad y mejoras de rendimiento.</p>
+        <ul class="card-list">
+          <li>SO y controladores</li>
+          <li>Aplicaciones empresariales</li>
+          <li>Firmware y BIOS</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">01</div>
       </div>
 
-      <div class="cards-grid">
-        <div class="card" data-index="01">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
-          </div>
-          <h3>Branding</h3>
-          <p>Identidades que perduran. Construimos marcas con carácter, coherencia y magnetismo.</p>
-          <span class="card-arrow">→</span>
-        </div>
-        <div class="card" data-index="02">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
-          </div>
-          <h3>UX / UI Design</h3>
-          <p>Experiencias digitales que enamoran. Cada pantalla, cada clic, diseñado con intención.</p>
-          <span class="card-arrow">→</span>
-        </div>
-        <div class="card" data-index="03">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
-          </div>
-          <h3>Web Development</h3>
-          <p>Código limpio, veloz y hermoso. Sitios y apps que impresionan desde el primer segundo.</p>
-          <span class="card-arrow">→</span>
-        </div>
-        <div class="card" data-index="04">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
-          </div>
-          <h3>Motion & Video</h3>
-          <p>Animaciones y piezas que detienen el scroll. Arte en movimiento al servicio de tu marca.</p>
-          <span class="card-arrow">→</span>
-        </div>
-        <div class="card" data-index="05">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
-          </div>
-          <h3>Estrategia Digital</h3>
-          <p>Campañas con cerebro. Llevamos tu mensaje a las personas correctas en el momento exacto.</p>
-          <span class="card-arrow">→</span>
-        </div>
-        <div class="card" data-index="06">
-          <div class="card-hex">
-            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
-          </div>
-          <h3>Social Media</h3>
-          <p>Contenido que conecta. Comunidades que crecen alrededor de tu esencia de marca.</p>
-          <span class="card-arrow">→</span>
-        </div>
+      <div class="service-card featured" data-index="02">
+        <div class="card-icon">🔧</div>
+        <div class="card-badge">Top</div>
+        <h3>Ampliación de<br/>Hardware</h3>
+        <p>Aumenta la memoria, almacenamiento o procesamiento. Dale nueva vida a tu equipo sin comprar uno nuevo.</p>
+        <ul class="card-list">
+          <li>RAM hasta 64 GB</li>
+          <li>SSD NVMe ultrarrápido</li>
+          <li>GPU para trabajo pesado</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">02</div>
+      </div>
+
+      <div class="service-card" data-index="03">
+        <div class="card-icon">🛡️</div>
+        <h3>Seguridad &<br/>Antivirus</h3>
+        <p>Protege tu información con soluciones robustas contra amenazas, malware y accesos no autorizados.</p>
+        <ul class="card-list">
+          <li>Antivirus corporativo</li>
+          <li>Firewall y VPN</li>
+          <li>Auditoría de seguridad</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">03</div>
+      </div>
+
+      <div class="service-card" data-index="04">
+        <div class="card-icon">☁️</div>
+        <h3>Migración a<br/>la Nube</h3>
+        <p>Lleva tu infraestructura a AWS, Azure o Google Cloud con cero pérdida de datos y máxima disponibilidad.</p>
+        <ul class="card-list">
+          <li>Análisis y planificación</li>
+          <li>Migración sin downtime</li>
+          <li>Soporte post-migración</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">04</div>
+      </div>
+
+      <div class="service-card" data-index="05">
+        <div class="card-icon">🔄</div>
+        <h3>Mantenimiento<br/>Preventivo</h3>
+        <p>Limpieza profunda, diagnóstico y revisión periódica para evitar fallas antes de que ocurran.</p>
+        <ul class="card-list">
+          <li>Limpieza interna</li>
+          <li>Pruebas de estrés</li>
+          <li>Reporte de diagnóstico</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">05</div>
+      </div>
+
+      <div class="service-card" data-index="06">
+        <div class="card-icon">📞</div>
+        <h3>Soporte Técnico<br/>24/7</h3>
+        <p>Asistencia remota o presencial en cualquier momento. Un experto disponible cuando más lo necesitas.</p>
+        <ul class="card-list">
+          <li>Soporte remoto inmediato</li>
+          <li>Visita a domicilio</li>
+          <li>Plan empresarial mensual</li>
+        </ul>
+        <a href="#contacto" class="card-btn">Solicitar →</a>
+        <div class="card-number">06</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="proceso">
+    <div class="section-header light">
+      <span class="section-tag dark">¿Cómo trabajamos?</span>
+      <h2>PROCESO <span class="accent-dark">SIMPLE</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Diagnóstico</h4>
+        <p>Evaluamos tu equipo y detectamos áreas de mejora sin costo.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Cotización</h4>
+        <p>Recibe una propuesta clara y sin sorpresas en menos de 24h.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Ejecución</h4>
+        <p>Nuestros técnicos trabajan rápido y con garantía de calidad.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Entrega</h4>
+        <p>Tu equipo listo, optimizado y con soporte posterior incluido.</p>
       </div>
     </div>
   </section>
 
-  <!-- TRABAJO / PORTAFOLIO -->
-  <section class="trabajo" id="trabajo">
-    <div class="container">
-      <div class="section-header invert">
-        <span class="section-tag">Portafolio</span>
-        <h2>Proyectos que<br/><em>nos enorgullecen.</em></h2>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="p-item big">
-          <div class="p-img" style="background: #FFD700;">
-            <div class="p-hex-pattern"></div>
-            <div class="p-label">BRANDING</div>
-          </div>
-          <div class="p-info">
-            <h4>Colmena Café</h4>
-            <span>Identidad & Packaging</span>
-          </div>
-        </div>
-        <div class="p-item">
-          <div class="p-img" style="background: #111;">
-            <div class="p-label light">UX/UI</div>
-          </div>
-          <div class="p-info">
-            <h4>FinHive App</h4>
-            <span>Mobile Design</span>
-          </div>
-        </div>
-        <div class="p-item">
-          <div class="p-img" style="background: #e8e8e8;">
-            <div class="p-label">MOTION</div>
-          </div>
-          <div class="p-info">
-            <h4>Hexluma Rebrand</h4>
-            <span>Animación & Video</span>
-          </div>
-        </div>
-        <div class="p-item">
-          <div class="p-img" style="background: #FFD700; filter: brightness(0.85);">
-            <div class="p-label">WEB</div>
-          </div>
-          <div class="p-info">
-            <h4>Buzzy Commerce</h4>
-            <span>E-commerce Dev</span>
-          </div>
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-inner">
+      <div class="contacto-text">
+        <span class="section-tag">¿Listo para mejorar?</span>
+        <h2>HABLEMOS DE <span class="accent">TU PROYECTO</span></h2>
+        <p>Cuéntanos qué necesitas y un especialista HIVE te contactará en menos de 2 horas.</p>
+        <div class="contacto-info">
+          <div class="info-item">📍 Cali, Colombia</div>
+          <div class="info-item">📞 +57 300 000 0000</div>
+          <div class="info-item">✉️ hola@hivetek.co</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="stat">
-      <span class="stat-num" data-target="120">0</span><sup>+</sup>
-      <span class="stat-label">Proyectos</span>
-    </div>
-    <div class="stat-divider">✦</div>
-    <div class="stat">
-      <span class="stat-num" data-target="48">0</span><sup>+</sup>
-      <span class="stat-label">Clientes</span>
-    </div>
-    <div class="stat-divider">✦</div>
-    <div class="stat">
-      <span class="stat-num" data-target="7">0</span>
-      <span class="stat-label">Años de experiencia</span>
-    </div>
-    <div class="stat-divider">✦</div>
-    <div class="stat">
-      <span class="stat-num" data-target="98">0</span><sup>%</sup>
-      <span class="stat-label">Satisfacción</span>
-    </div>
-  </div>
-
-  <!-- NOSOTROS -->
-  <section class="nosotros" id="nosotros">
-    <div class="container nos-grid">
-      <div class="nos-text">
-        <span class="section-tag">Nosotros</span>
-        <h2>Una colmena de<br/><em>mentes creativas.</em></h2>
-        <p>En HIVE creemos que el buen diseño no es solo estética — es estrategia. Somos un equipo de diseñadores, estrategas y desarrolladores que trabajan como abejas: con propósito, precisión y pasión.</p>
-        <p>Cada proyecto es una celda en nuestra colmena: único, cuidado y parte de algo más grande.</p>
-        <a href="#contacto" class="btn-primary">Trabajemos juntos</a>
-      </div>
-      <div class="nos-visual">
-        <div class="nos-hex-grid" id="nosHexGrid"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIOS -->
-  <section class="testimonios">
-    <div class="container">
-      <span class="section-tag center">Testimonios</span>
-      <div class="testi-slider" id="testiSlider">
-        <div class="testi active">
-          <p>"HIVE transformó completamente la imagen de nuestra marca. El resultado superó todas las expectativas. Un equipo increíble."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">ML</div>
-            <div>
-              <strong>María López</strong>
-              <span>CEO, Colmena Café</span>
-            </div>
-          </div>
+      <form class="contacto-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <input type="text" placeholder="Tu nombre" required />
         </div>
-        <div class="testi">
-          <p>"Trabajar con HIVE fue un placer de principio a fin. Entendieron nuestra visión y la llevaron a otro nivel. Totalmente recomendados."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">CA</div>
-            <div>
-              <strong>Carlos Arango</strong>
-              <span>Fundador, FinHive</span>
-            </div>
-          </div>
+        <div class="form-group">
+          <input type="email" placeholder="Tu email" required />
         </div>
-        <div class="testi">
-          <p>"El mejor equipo creativo con el que hemos trabajado. Rápidos, talentosos y siempre atentos a los detalles. ¡Los amamos!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar">SR</div>
-            <div>
-              <strong>Sara Restrepo</strong>
-              <span>Directora de Marketing, Hexluma</span>
-            </div>
-          </div>
+        <div class="form-group">
+          <select required>
+            <option value="" disabled selected>Servicio de interés</option>
+            <option>Actualización de Software</option>
+            <option>Ampliación de Hardware</option>
+            <option>Seguridad & Antivirus</option>
+            <option>Migración a la Nube</option>
+            <option>Mantenimiento Preventivo</option>
+            <option>Soporte Técnico 24/7</option>
+          </select>
         </div>
-      </div>
-      <div class="testi-dots" id="testiDots">
-        <button class="dot active" data-i="0"></button>
-        <button class="dot" data-i="1"></button>
-        <button class="dot" data-i="2"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-final" id="contacto">
-    <div class="cta-hex-bg"></div>
-    <div class="container cta-content">
-      <h2>¿Listo para<br/><em>que tu marca vuele?</em></h2>
-      <p>Cuéntanos tu proyecto. Respondemos en menos de 24 horas.</p>
-      <div class="cta-form">
-        <input type="text" placeholder="Tu nombre" class="cta-input" id="nameInput"/>
-        <input type="email" placeholder="Tu email" class="cta-input" id="emailInput"/>
-        <textarea placeholder="Cuéntanos tu proyecto..." class="cta-input" rows="4" id="msgInput"></textarea>
-        <button class="btn-primary large" id="ctaBtn">
-          <span>Enviar mensaje</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
-      </div>
+        <div class="form-group">
+          <textarea placeholder="Cuéntanos tu necesidad..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensaje ⚡</button>
+        <p class="form-success" id="formSuccess">✅ ¡Mensaje enviado! Te contactamos pronto.</p>
+      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <svg class="nav-honeycomb" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
-            <polygon points="20,9 29,14 29,26 20,31 11,26 11,14" fill="#000"/>
-          </svg>
-          <span>HIVE</span>
-        </div>
-        <p>Diseño que zumba.<br/>Estrategia que vuela.</p>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-icon small" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="14" width="40" height="22" rx="8" fill="#FFD600" stroke="#111" stroke-width="2"/>
+          <ellipse cx="24" cy="25" rx="10" ry="7" fill="#fff" stroke="#111" stroke-width="1.5"/>
+          <path d="M4 22 Q14 30 24 25 Q34 20 44 22" stroke="#111" stroke-width="1.5" fill="none"/>
+          <path d="M4 28 Q14 22 24 25 Q34 28 44 28" stroke="#111" stroke-width="1.5" fill="none"/>
+          <circle cx="12" cy="25" r="3" fill="#111"/>
+          <circle cx="36" cy="25" r="3" fill="#111"/>
+        </svg>
+        <span class="logo-text">HIVE</span>
       </div>
+      <p class="footer-copy">© 2026 HIVE Tecnología · Todos los derechos reservados</p>
       <div class="footer-links">
-        <h5>Servicios</h5>
-        <a href="#">Branding</a>
-        <a href="#">UX/UI</a>
-        <a href="#">Web Dev</a>
-        <a href="#">Motion</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#contacto">Contacto</a>
       </div>
-      <div class="footer-links">
-        <h5>Empresa</h5>
-        <a href="#">Nosotros</a>
-        <a href="#">Portafolio</a>
-        <a href="#">Blog</a>
-        <a href="#">Contacto</a>
-      </div>
-      <div class="footer-social">
-        <h5>Síguenos</h5>
-        <div class="social-icons">
-          <a href="#" class="social-icon">IG</a>
-          <a href="#" class="social-icon">LI</a>
-          <a href="#" class="social-icon">BE</a>
-          <a href="#" class="social-icon">TW</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 HIVE Studio. Todos los derechos reservados.</span>
-      <span>Hecho con ♥ y mucho café ☕</span>
     </div>
   </footer>
 
   <script>
-    // ─── CURSOR ──────────────────────────────
+
+        // ─── CURSOR ──────────────────────────────
     const cursor = document.getElementById('cursor');
     const follower = document.getElementById('cursorFollower');
     let mx = 0, my = 0, fx = 0, fy = 0;
@@ -365,103 +307,44 @@
       el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
     });
 
-    // ─── PANAL FONDO HERO ────────────────────
-    const bg = document.getElementById('honeycombBg');
-    const cols = Math.ceil(window.innerWidth / 88) + 2;
-    const rows = Math.ceil(window.innerHeight / 100) + 2;
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const h = document.createElement('div');
-        h.className = 'hex-cell';
-        h.style.animationDelay = (Math.random() * 4) + 's';
-        bg.appendChild(h);
-      }
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      e.target.reset();
+      setTimeout(() => {
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 4000);
     }
 
-    // ─── PANAL NOSOTROS ──────────────────────
-    const nosGrid = document.getElementById('nosHexGrid');
-    const positions = [
-      [0,0],[1,0],[2,0],[0.5,1],[1.5,1],[2.5,1],[0,2],[1,2],[2,2],[0.5,3],[1.5,3]
-    ];
-    positions.forEach(([x,y], i) => {
-      const h = document.createElement('div');
-      h.className = 'nos-hex';
-      h.style.left = (x * 72) + 'px';
-      h.style.top = (y * 62) + 'px';
-      h.style.animationDelay = (i * 0.1) + 's';
-      if (i % 3 === 0) h.classList.add('yellow');
-      if (i % 5 === 0) h.classList.add('black');
-      nosGrid.appendChild(h);
+    // Card hover tilt
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        card.style.transform = `perspective(600px) rotateY(${x / 30}deg) rotateX(${-y / 30}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
     });
 
-    // ─── BIG HEX PARALLAX ────────────────────
-    const bigHex = document.getElementById('bigHex');
-    document.addEventListener('mousemove', e => {
-      const dx = (e.clientX / window.innerWidth - 0.5) * 20;
-      const dy = (e.clientY / window.innerHeight - 0.5) * 20;
-      bigHex.style.transform = `rotateY(${dx}deg) rotateX(${-dy}deg)`;
-    });
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
 
-    // ─── TESTIMONIOS ─────────────────────────
-    let currentTesti = 0;
-    const testis = document.querySelectorAll('.testi');
-    const dots = document.querySelectorAll('.dot');
-    function showTesti(i) {
-      testis[currentTesti].classList.remove('active');
-      dots[currentTesti].classList.remove('active');
-      currentTesti = i;
-      testis[currentTesti].classList.add('active');
-      dots[currentTesti].classList.add('active');
-    }
-    dots.forEach(d => d.addEventListener('click', () => showTesti(+d.dataset.i)));
-    setInterval(() => showTesti((currentTesti + 1) % testis.length), 5000);
-
-    // ─── STATS COUNTER ───────────────────────
-    const statNums = document.querySelectorAll('.stat-num');
-    const statsBar = document.querySelector('.stats-bar');
-    let counted = false;
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && !counted) {
-        counted = true;
-        statNums.forEach(el => {
-          const target = +el.dataset.target;
-          let count = 0;
-          const inc = Math.ceil(target / 60);
-          const timer = setInterval(() => {
-            count = Math.min(count + inc, target);
-            el.textContent = count;
-            if (count >= target) clearInterval(timer);
-          }, 30);
-        });
-      }
-    }, { threshold: 0.5 });
-    observer.observe(statsBar);
-
-    // ─── CTA FORM ────────────────────────────
-    document.getElementById('ctaBtn').addEventListener('click', () => {
-      const n = document.getElementById('nameInput').value.trim();
-      const e = document.getElementById('emailInput').value.trim();
-      const m = document.getElementById('msgInput').value.trim();
-      const btn = document.getElementById('ctaBtn');
-      if (!n || !e || !m) { btn.style.background = '#ff4444'; btn.querySelector('span').textContent = 'Completa todos los campos'; setTimeout(() => { btn.style.background = ''; btn.querySelector('span').textContent = 'Enviar mensaje'; }, 2000); return; }
-      btn.querySelector('span').textContent = '¡Mensaje enviado! 🐝';
-      btn.style.background = '#000';
-      setTimeout(() => { btn.querySelector('span').textContent = 'Enviar mensaje'; btn.style.background = ''; document.getElementById('nameInput').value = ''; document.getElementById('emailInput').value = ''; document.getElementById('msgInput').value = ''; }, 3000);
-    });
-
-    // ─── NAVBAR SCROLL ───────────────────────
-    const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
-
-    // ─── SCROLL REVEAL ───────────────────────
-    const reveals = document.querySelectorAll('.card, .p-item, .stat, .testi, .nos-text > *');
-    const revObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } });
-    }, { threshold: 0.15 });
-    reveals.forEach(el => { el.classList.add('reveal-ready'); revObs.observe(el); });
-
-    // ─── MOBILE BURGER ───────────────────────
-    document.getElementById('burger').addEventListener('click', () => { document.querySelector('.nav-links').classList.toggle('open'); });
+    document.querySelectorAll('.service-card, .step, .stat').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
