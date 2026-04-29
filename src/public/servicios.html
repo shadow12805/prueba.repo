@@ -1,66 +1,467 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Mi Sitio Web</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../src/styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HIVE — Diseño que zumba</title>
+  <link rel="stylesheet" href="/src/styles/style_ser.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <strong>Mi Sitio Web</strong>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactos.html">Contactos</a>
-                    </li>
-                </ul>
-            </div>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <svg class="nav-honeycomb" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
+        <polygon points="20,9 29,14 29,26 20,31 11,26 11,14" fill="#000"/>
+      </svg>
+      <span>HIVE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#index">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contactos" class="nav-cta">Contáctanos</a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Panal de fondo animado -->
+    <div class="honeycomb-bg" id="honeycombBg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Agencia Creativa</div>
+      <h1 class="hero-title">
+        <span class="line">colmena</span>
+        <span class="line accent">de</span>
+        <span class="line">tecnologia.</span>
+      </h1>
+      <p class="hero-sub">Construimos marcas que dejan huella. Colmenas de ideas, estrategia y creatividad que trabajan para ti.</p>
+      <div class="hero-actions">
+        <a href="#trabajo" class="btn-primary">Ver nuestro trabajo</a>
+        <a href="#nosotros" class="btn-ghost">Conoce HIVE →</a>
+      </div>
+    </div>
+
+    <!-- Logo central gigante -->
+    <div class="hero-logo-wrap">
+      <div class="big-hex" id="bigHex">
+        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="hex-outer" points="100,8 188,55 188,165 100,212 12,165 12,55"/>
+          <polygon class="hex-mid"   points="100,28 170,68 170,148 100,188 30,148 30,68"/>
+          <polygon class="hex-inner" points="100,52 152,82 152,142 100,172 48,142 48,82"/>
+          <!-- Abeja central -->
+          <ellipse cx="100" cy="112" rx="18" ry="24" fill="#FFD700"/>
+          <ellipse cx="100" cy="112" rx="18" ry="24" fill="none" stroke="#000" stroke-width="2"/>
+          <!-- Rayas abeja -->
+          <line x1="82" y1="104" x2="118" y2="104" stroke="#000" stroke-width="3"/>
+          <line x1="82" y1="112" x2="118" y2="112" stroke="#000" stroke-width="3"/>
+          <line x1="82" y1="120" x2="118" y2="120" stroke="#000" stroke-width="3"/>
+          <!-- Alas -->
+          <ellipse cx="78" cy="96" rx="16" ry="10" fill="rgba(255,255,255,0.75)" stroke="#000" stroke-width="1.5" class="wing"/>
+          <ellipse cx="122" cy="96" rx="16" ry="10" fill="rgba(255,255,255,0.75)" stroke="#000" stroke-width="1.5" class="wing"/>
+          <!-- Ojos -->
+          <circle cx="93" cy="92" r="3" fill="#000"/>
+          <circle cx="107" cy="92" r="3" fill="#000"/>
+          <!-- Antenas -->
+          <line x1="93" y1="88" x2="83" y2="74" stroke="#000" stroke-width="2"/>
+          <circle cx="83" cy="74" r="3" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
+          <line x1="107" y1="88" x2="117" y2="74" stroke="#000" stroke-width="2"/>
+          <circle cx="117" cy="74" r="3" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Branding ✦</span><span>UX/UI ✦</span><span>Motion ✦</span><span>Web Dev ✦</span>
+      <span>Strategy ✦</span><span>Identidad ✦</span><span>Campañas ✦</span><span>Social Media ✦</span>
+      <span>Branding ✦</span><span>UX/UI ✦</span><span>Motion ✦</span><span>Web Dev ✦</span>
+      <span>Strategy ✦</span><span>Identidad ✦</span><span>Campañas ✦</span><span>Social Media ✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Servicios</span>
+        <h2>Lo que hacemos<br/><em>mejor que nadie.</em></h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card" data-index="01">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
+          </div>
+          <h3>Branding</h3>
+          <p>Identidades que perduran. Construimos marcas con carácter, coherencia y magnetismo.</p>
+          <span class="card-arrow">→</span>
         </div>
-    </nav>
-
-    <!-- Contenido Principal -->
-    <main>
-        <section class="py-5">
-            <div class="container">
-                <h1 class="mb-4">Servicios</h1>
-                <div class="alert alert-info" role="alert">
-                    <p>Los servicios en esta página aún están siendo desarrollados por Rubiela y Mauricio.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
-            <small>Desarrollado con HTML, CSS, JavaScript y Bootstrap</small>
+        <div class="card" data-index="02">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
+          </div>
+          <h3>UX / UI Design</h3>
+          <p>Experiencias digitales que enamoran. Cada pantalla, cada clic, diseñado con intención.</p>
+          <span class="card-arrow">→</span>
         </div>
-    </footer>
+        <div class="card" data-index="03">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Código limpio, veloz y hermoso. Sitios y apps que impresionan desde el primer segundo.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card" data-index="04">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
+          </div>
+          <h3>Motion & Video</h3>
+          <p>Animaciones y piezas que detienen el scroll. Arte en movimiento al servicio de tu marca.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card" data-index="05">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#FFD700"/></svg>
+          </div>
+          <h3>Estrategia Digital</h3>
+          <p>Campañas con cerebro. Llevamos tu mensaje a las personas correctas en el momento exacto.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card" data-index="06">
+          <div class="card-hex">
+            <svg viewBox="0 0 60 70"><polygon points="30,3 57,17 57,53 30,67 3,53 3,17" fill="#000"/></svg>
+          </div>
+          <h3>Social Media</h3>
+          <p>Contenido que conecta. Comunidades que crecen alrededor de tu esencia de marca.</p>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../src/scripts/script.js"></script>
+  <!-- TRABAJO / PORTAFOLIO -->
+  <section class="trabajo" id="trabajo">
+    <div class="container">
+      <div class="section-header invert">
+        <span class="section-tag">Portafolio</span>
+        <h2>Proyectos que<br/><em>nos enorgullecen.</em></h2>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="p-item big">
+          <div class="p-img" style="background: #FFD700;">
+            <div class="p-hex-pattern"></div>
+            <div class="p-label">BRANDING</div>
+          </div>
+          <div class="p-info">
+            <h4>Colmena Café</h4>
+            <span>Identidad & Packaging</span>
+          </div>
+        </div>
+        <div class="p-item">
+          <div class="p-img" style="background: #111;">
+            <div class="p-label light">UX/UI</div>
+          </div>
+          <div class="p-info">
+            <h4>FinHive App</h4>
+            <span>Mobile Design</span>
+          </div>
+        </div>
+        <div class="p-item">
+          <div class="p-img" style="background: #e8e8e8;">
+            <div class="p-label">MOTION</div>
+          </div>
+          <div class="p-info">
+            <h4>Hexluma Rebrand</h4>
+            <span>Animación & Video</span>
+          </div>
+        </div>
+        <div class="p-item">
+          <div class="p-img" style="background: #FFD700; filter: brightness(0.85);">
+            <div class="p-label">WEB</div>
+          </div>
+          <div class="p-info">
+            <h4>Buzzy Commerce</h4>
+            <span>E-commerce Dev</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num" data-target="120">0</span><sup>+</sup>
+      <span class="stat-label">Proyectos</span>
+    </div>
+    <div class="stat-divider">✦</div>
+    <div class="stat">
+      <span class="stat-num" data-target="48">0</span><sup>+</sup>
+      <span class="stat-label">Clientes</span>
+    </div>
+    <div class="stat-divider">✦</div>
+    <div class="stat">
+      <span class="stat-num" data-target="7">0</span>
+      <span class="stat-label">Años de experiencia</span>
+    </div>
+    <div class="stat-divider">✦</div>
+    <div class="stat">
+      <span class="stat-num" data-target="98">0</span><sup>%</sup>
+      <span class="stat-label">Satisfacción</span>
+    </div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <section class="nosotros" id="nosotros">
+    <div class="container nos-grid">
+      <div class="nos-text">
+        <span class="section-tag">Nosotros</span>
+        <h2>Una colmena de<br/><em>mentes creativas.</em></h2>
+        <p>En HIVE creemos que el buen diseño no es solo estética — es estrategia. Somos un equipo de diseñadores, estrategas y desarrolladores que trabajan como abejas: con propósito, precisión y pasión.</p>
+        <p>Cada proyecto es una celda en nuestra colmena: único, cuidado y parte de algo más grande.</p>
+        <a href="#contacto" class="btn-primary">Trabajemos juntos</a>
+      </div>
+      <div class="nos-visual">
+        <div class="nos-hex-grid" id="nosHexGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <div class="container">
+      <span class="section-tag center">Testimonios</span>
+      <div class="testi-slider" id="testiSlider">
+        <div class="testi active">
+          <p>"HIVE transformó completamente la imagen de nuestra marca. El resultado superó todas las expectativas. Un equipo increíble."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">ML</div>
+            <div>
+              <strong>María López</strong>
+              <span>CEO, Colmena Café</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi">
+          <p>"Trabajar con HIVE fue un placer de principio a fin. Entendieron nuestra visión y la llevaron a otro nivel. Totalmente recomendados."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">CA</div>
+            <div>
+              <strong>Carlos Arango</strong>
+              <span>Fundador, FinHive</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi">
+          <p>"El mejor equipo creativo con el que hemos trabajado. Rápidos, talentosos y siempre atentos a los detalles. ¡Los amamos!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SR</div>
+            <div>
+              <strong>Sara Restrepo</strong>
+              <span>Directora de Marketing, Hexluma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-dots" id="testiDots">
+        <button class="dot active" data-i="0"></button>
+        <button class="dot" data-i="1"></button>
+        <button class="dot" data-i="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contacto">
+    <div class="cta-hex-bg"></div>
+    <div class="container cta-content">
+      <h2>¿Listo para<br/><em>que tu marca vuele?</em></h2>
+      <p>Cuéntanos tu proyecto. Respondemos en menos de 24 horas.</p>
+      <div class="cta-form">
+        <input type="text" placeholder="Tu nombre" class="cta-input" id="nameInput"/>
+        <input type="email" placeholder="Tu email" class="cta-input" id="emailInput"/>
+        <textarea placeholder="Cuéntanos tu proyecto..." class="cta-input" rows="4" id="msgInput"></textarea>
+        <button class="btn-primary large" id="ctaBtn">
+          <span>Enviar mensaje</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="nav-honeycomb" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#FFD700" stroke="#000" stroke-width="1.5"/>
+            <polygon points="20,9 29,14 29,26 20,31 11,26 11,14" fill="#000"/>
+          </svg>
+          <span>HIVE</span>
+        </div>
+        <p>Diseño que zumba.<br/>Estrategia que vuela.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Servicios</h5>
+        <a href="#">Branding</a>
+        <a href="#">UX/UI</a>
+        <a href="#">Web Dev</a>
+        <a href="#">Motion</a>
+      </div>
+      <div class="footer-links">
+        <h5>Empresa</h5>
+        <a href="#">Nosotros</a>
+        <a href="#">Portafolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="footer-social">
+        <h5>Síguenos</h5>
+        <div class="social-icons">
+          <a href="#" class="social-icon">IG</a>
+          <a href="#" class="social-icon">LI</a>
+          <a href="#" class="social-icon">BE</a>
+          <a href="#" class="social-icon">TW</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 HIVE Studio. Todos los derechos reservados.</span>
+      <span>Hecho con ♥ y mucho café ☕</span>
+    </div>
+  </footer>
+
+  <script>
+    // ─── CURSOR ──────────────────────────────
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursorFollower');
+    let mx = 0, my = 0, fx = 0, fy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
+    function animFollower() { fx += (mx - fx) * 0.12; fy += (my - fy) * 0.12; follower.style.left = fx + 'px'; follower.style.top = fy + 'px'; requestAnimationFrame(animFollower); }
+    animFollower();
+    document.querySelectorAll('a, button, .card, .p-item').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); follower.classList.add('hover'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
+    });
+
+    // ─── PANAL FONDO HERO ────────────────────
+    const bg = document.getElementById('honeycombBg');
+    const cols = Math.ceil(window.innerWidth / 88) + 2;
+    const rows = Math.ceil(window.innerHeight / 100) + 2;
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const h = document.createElement('div');
+        h.className = 'hex-cell';
+        h.style.animationDelay = (Math.random() * 4) + 's';
+        bg.appendChild(h);
+      }
+    }
+
+    // ─── PANAL NOSOTROS ──────────────────────
+    const nosGrid = document.getElementById('nosHexGrid');
+    const positions = [
+      [0,0],[1,0],[2,0],[0.5,1],[1.5,1],[2.5,1],[0,2],[1,2],[2,2],[0.5,3],[1.5,3]
+    ];
+    positions.forEach(([x,y], i) => {
+      const h = document.createElement('div');
+      h.className = 'nos-hex';
+      h.style.left = (x * 72) + 'px';
+      h.style.top = (y * 62) + 'px';
+      h.style.animationDelay = (i * 0.1) + 's';
+      if (i % 3 === 0) h.classList.add('yellow');
+      if (i % 5 === 0) h.classList.add('black');
+      nosGrid.appendChild(h);
+    });
+
+    // ─── BIG HEX PARALLAX ────────────────────
+    const bigHex = document.getElementById('bigHex');
+    document.addEventListener('mousemove', e => {
+      const dx = (e.clientX / window.innerWidth - 0.5) * 20;
+      const dy = (e.clientY / window.innerHeight - 0.5) * 20;
+      bigHex.style.transform = `rotateY(${dx}deg) rotateX(${-dy}deg)`;
+    });
+
+    // ─── TESTIMONIOS ─────────────────────────
+    let currentTesti = 0;
+    const testis = document.querySelectorAll('.testi');
+    const dots = document.querySelectorAll('.dot');
+    function showTesti(i) {
+      testis[currentTesti].classList.remove('active');
+      dots[currentTesti].classList.remove('active');
+      currentTesti = i;
+      testis[currentTesti].classList.add('active');
+      dots[currentTesti].classList.add('active');
+    }
+    dots.forEach(d => d.addEventListener('click', () => showTesti(+d.dataset.i)));
+    setInterval(() => showTesti((currentTesti + 1) % testis.length), 5000);
+
+    // ─── STATS COUNTER ───────────────────────
+    const statNums = document.querySelectorAll('.stat-num');
+    const statsBar = document.querySelector('.stats-bar');
+    let counted = false;
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !counted) {
+        counted = true;
+        statNums.forEach(el => {
+          const target = +el.dataset.target;
+          let count = 0;
+          const inc = Math.ceil(target / 60);
+          const timer = setInterval(() => {
+            count = Math.min(count + inc, target);
+            el.textContent = count;
+            if (count >= target) clearInterval(timer);
+          }, 30);
+        });
+      }
+    }, { threshold: 0.5 });
+    observer.observe(statsBar);
+
+    // ─── CTA FORM ────────────────────────────
+    document.getElementById('ctaBtn').addEventListener('click', () => {
+      const n = document.getElementById('nameInput').value.trim();
+      const e = document.getElementById('emailInput').value.trim();
+      const m = document.getElementById('msgInput').value.trim();
+      const btn = document.getElementById('ctaBtn');
+      if (!n || !e || !m) { btn.style.background = '#ff4444'; btn.querySelector('span').textContent = 'Completa todos los campos'; setTimeout(() => { btn.style.background = ''; btn.querySelector('span').textContent = 'Enviar mensaje'; }, 2000); return; }
+      btn.querySelector('span').textContent = '¡Mensaje enviado! 🐝';
+      btn.style.background = '#000';
+      setTimeout(() => { btn.querySelector('span').textContent = 'Enviar mensaje'; btn.style.background = ''; document.getElementById('nameInput').value = ''; document.getElementById('emailInput').value = ''; document.getElementById('msgInput').value = ''; }, 3000);
+    });
+
+    // ─── NAVBAR SCROLL ───────────────────────
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+    // ─── SCROLL REVEAL ───────────────────────
+    const reveals = document.querySelectorAll('.card, .p-item, .stat, .testi, .nos-text > *');
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => { el.classList.add('reveal-ready'); revObs.observe(el); });
+
+    // ─── MOBILE BURGER ───────────────────────
+    document.getElementById('burger').addEventListener('click', () => { document.querySelector('.nav-links').classList.toggle('open'); });
+  </script>
 </body>
 </html>
